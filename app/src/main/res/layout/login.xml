@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.164"
-        app:srcCompat="@drawable/logo_putih" />
+        app:srcCompat="@drawable/ic_welcome_logo" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="409dp"
@@ -34,9 +34,10 @@
             android:layout_weight="1"
             android:backgroundTint="#ffffff"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Username"
+            android:inputType="text"
+            android:hint="@string/Username"
             android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
@@ -51,7 +52,7 @@
             android:backgroundTint="#ffffff"
             android:ems="10"
             android:fontFamily="sans-serif"
-            android:hint="Password"
+            android:hint="@string/Password"
             android:inputType="textPassword"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
@@ -63,19 +64,112 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.276" />
 
-        <Button
-            android:id="@+id/button"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="328dp"
             android:layout_height="50dp"
-            android:background="@drawable/main_button"
-            android:text="LOGIN"
-            android:textColor="#ffffff"
+            android:layout_margin="24dp"
+            android:text="@string/login"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.46" />
+            app:layout_constraintVertical_bias="0.448"
+            app:strokeColor="@color/white"
+            app:strokeWidth="3dp">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/or"
+            android:textAppearance="@style/styleor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.57">
+
+        </TextView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/facebookButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="328dp"
+            android:layout_height="50dp"
+            android:layout_margin="24dp"
+            android:text="@string/connect_fb"
+            android:textColor="@color/white"
+            app:icon="@drawable/ic_welcome_fb_login"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.715"
+            app:strokeColor="@color/white"
+            app:strokeWidth="3dp">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.809">
+
+            <TextView
+                android:id="@+id/register"
+                android:layout_width="54dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="247dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="108dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/register"
+                android:textColor="@color/white"
+                app:strokeWidth="0dp"
+                tools:ignore="InvalidId">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="149dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="103dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="157dp"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/account"
+                android:textColor="@color/white">
+
+            </TextView>
+
+        </RelativeLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
