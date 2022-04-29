@@ -6,6 +6,15 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ *
+ * Tanggal Pengerjaan       : 29 April 2022
+ * NIM                      : 10119918
+ * Nama                     : Andreas Suryadi
+ * Kelas                    : IF-10K
+ *
+ */
+
 public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
