@@ -1,14 +1,12 @@
 package com.example.a10119918latihan2;
-import android.content.Intent;
+
 import android.os.Bundle;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class VerifyActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,15 +14,6 @@ public class VerifyActivity extends AppCompatActivity {
         getSupportActionBar().hide(); // hide the title bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
-        setContentView(R.layout.verify);
-
-        Button btnSend = (Button) findViewById(R.id.btnsend);
-        btnSend.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(VerifyActivity.this, HomeActivity.class);
-                startActivity(intent);
-            }
-        });
+        setContentView(R.layout.home);
     }
 }
