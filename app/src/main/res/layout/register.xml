@@ -1,6 +1,292 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/ic_header"
+            android:contentDescription="@string/header"></ImageView>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/ic_header_back"
+            android:contentDescription="@string/arrowback">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:backgroundTint="@color/separator"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/Username"
+                android:inputType="textCapWords"
+                android:maxLength="8"
+                android:minHeight="48dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/separator"
+                android:textColorHint="@color/separator">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:backgroundTint="@color/separator"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/email"
+                android:inputType="textCapWords"
+                android:maxLength="8"
+                android:minHeight="48dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/separator"
+                android:textColorHint="@color/separator"
+                tools:ignore="TextFields">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/phonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:backgroundTint="@color/separator"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/phonenumber"
+                android:inputType="textCapWords"
+                android:maxLength="8"
+                android:minHeight="48dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/separator"
+                android:textColorHint="@color/separator"
+                tools:ignore="TextFields">
+
+            </EditText>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/male"
+                    android:textColor="@color/separator"></RadioButton>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/female"
+                    android:textColor="@color/separator"></RadioButton>
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/x"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Spinner
+                    android:id="@+id/blood_type"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/separator"
+                    android:entries="@array/blood_type"
+                    android:padding="15dp"></Spinner>
+
+                <Spinner
+                    android:id="@+id/a"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/separator"
+                    android:entries="@array/blood_type"
+                    android:padding="15dp"></Spinner>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:backgroundTint="@color/separator"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/Password"
+                android:inputType="textCapWords"
+                android:maxLength="8"
+                android:minHeight="48dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/separator"
+                android:textColorHint="@color/separator"
+                tools:ignore="TextFields">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/retypepass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:backgroundTint="@color/separator"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/retypepass"
+                android:inputType="textCapWords"
+                android:maxLength="8"
+                android:minHeight="48dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/separator"
+                android:textColorHint="@color/separator"
+                tools:ignore="TextFields">
+
+            </EditText>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/personal"
+                    android:textColor="@color/separator"></RadioButton>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/organization"
+                    android:textColor="@color/separator"></RadioButton>
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/ab"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/separator"
+                android:entries="@array/job"
+                android:padding="15dp"></Spinner>
+
+            <EditText
+                android:id="@+id/homeaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:backgroundTint="@color/separator"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/homeaddress"
+                android:inputType="textCapWords"
+                android:maxLength="8"
+                android:minHeight="48dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/separator"
+                android:textColorHint="@color/separator"
+                tools:ignore="TextFields">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/defaultlocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:backgroundTint="@color/separator"
+                android:drawableEnd="@drawable/ic_blood_needed_location"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/defaultlocation"
+                android:inputType="textCapWords"
+                android:maxLength="8"
+                android:minHeight="48dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/separator"
+                android:textColorHint="@color/separator"
+                tools:ignore="TextFields">
+
+            </EditText>
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="@string/agree"
+                android:textColor="@color/separator"></CheckBox>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnregister"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/register"
+                android:textColor="@color/lightblue"
+                app:strokeColor="@color/lightblue"
+                app:strokeWidth="2dp"
+                tools:ignore="DuplicateSpeakableTextCheck">
+
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

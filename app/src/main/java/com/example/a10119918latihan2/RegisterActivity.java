@@ -1,26 +1,25 @@
 package com.example.a10119918latihan2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.TextView;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  *
- * Tanggal Pengerjaan       : 27 April 2022
+ * Tanggal Pengerjaan       : 29 April 2022
  * NIM                      : 10119918
  * Nama                     : Andreas Suryadi
  * Kelas                    : IF-10K
  *
  */
 
-public class MainActivity extends AppCompatActivity {
-
-    TextView textView;
+public class RegisterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +28,16 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide(); // hide the title bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
-        setContentView(R.layout.login);
+        setContentView(R.layout.register);
 
-        textView = findViewById(R.id.register);
-        textView.setOnClickListener(v -> {
-            Intent intent=new Intent(MainActivity.this, RegisterActivity.class);
-            startActivity(intent);
+        Button btnRegister = (Button) findViewById(R.id.btnregister);
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(RegisterActivity.this, AlmostThereActivity.class);
+                startActivity(intent);
+            }
         });
+
     }
 }
